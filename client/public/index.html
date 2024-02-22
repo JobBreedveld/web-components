@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/public/reset-css.css" />
+    <link rel="stylesheet" type="text/css" href="/public/index.css" />
+    <script type="module" src="/src/components/router.js"></script>
+    <script type="module" src="/src/components/menu-drawer.js"></script>
+
+    <title>App</title>
+  </head>
+  <body>
+    <wc-router>
+      <menu-drawer>
+        <a route="/">Home</a>
+        <a route="/about">About</a>
+        <a route="/contact">Contact</a>
+      </menu-drawer>
+
+      <wc-route path="/" component="home-page"></wc-route>
+      <wc-route path="/about" component="about-page"></wc-route>
+      <wc-route path="/contact" component="contact-page"></wc-route>
+
+      <wc-outlet></wc-outlet>
+    </wc-router>
+  </body>
+</html>
