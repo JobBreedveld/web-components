@@ -3,8 +3,8 @@ const config = {
   semi: false,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: "es5",
+  trailingComma: 'es5',
   useTabs: false,
-};
+}
 
-export default config;
+export default config

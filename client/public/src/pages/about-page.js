@@ -1,7 +1,8 @@
 'use-strict'
-export { ContactPage }
 
-class ContactPage extends HTMLElement {
+export { AboutPage }
+
+class AboutPage extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <style>
@@ -14,10 +15,10 @@ class ContactPage extends HTMLElement {
         }
       </style>
 
-      <h1>Contact</h1>
-      <p>Contact opnemen</p>
+      <h1>About</h1>
+      <p>About</p>
     `
   }
 }
 
-customElements.define('contact-page', ContactPage)
+customElements.define('about-page', AboutPage)

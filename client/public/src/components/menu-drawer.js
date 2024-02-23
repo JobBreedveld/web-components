@@ -1,20 +1,19 @@
 'use-strict'
+
 const menuDrawerTemplate = document.createElement('template')
 menuDrawerTemplate.innerHTML = `
   <style>
     :host {
       background: #ccc;
-      padding: 1rem;
-      flex-grow: 1;
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
       max-width: 300px;
+      padding: 1rem;
     }
   </style>
 
-  <nav>
-    <slot></slot>
-  </nav>
+  <slot></slot>
 `
 
 class MenuDrawer extends HTMLElement {

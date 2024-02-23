@@ -1,8 +1,8 @@
 'use strict'
+
 import { match } from '../utils/match.js'
 
 const routerTemplate = document.createElement('template')
-
 routerTemplate.innerHTML = `
   <style>
     :host {
@@ -12,26 +12,26 @@ routerTemplate.innerHTML = `
   </style>
 
   <slot></slot>
-`
+  `
 
-export default class Router extends HTMLElement {
+class Router extends HTMLElement {
   constructor() {
     super()
     const shadow = this.attachShadow({ mode: 'open' })
     shadow.appendChild(routerTemplate.content.cloneNode(true))
   }
   /**
-   * Router looks for a wc-outlet tag for updating the views on history updates.
+   * Router looks for a main tag for updating the views on history updates.
    * Example:
    *
    * <wc-router>
-   *  <wc-outlet>
+   *  <maint>
    *    <!-- All DOM update will be happening here on route change -->
-   *  </wc-outlet>
+   *  </main>
    * </wc-router>
    */
   get outlet() {
-    return this.querySelector('wc-outlet')
+    return this.querySelector('main')
   }
 
   get root() {

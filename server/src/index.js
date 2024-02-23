@@ -32,8 +32,9 @@ const mimeTypes = {
 
 http
   .createServer((req, res) => {
-    if (req.url.indexOf('/public/') !== -1 || req.url.indexOf('/src/') !== -1) {
+    if (req.url.indexOf('/public/') !== -1) {
       let urlParts = req.url.split('/').filter(Boolean)
+      console.log(urlParts)
 
       if (process.env.NODE_ENV === 'development') {
         urlParts = ['client', ...urlParts]
